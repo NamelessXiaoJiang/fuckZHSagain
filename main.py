@@ -5,7 +5,6 @@ import time
 import argparse
 import requests
 import platform
-import faker
 import polymas_course_fetcher
 from functools import partial
 from contextlib import suppress
@@ -213,6 +212,7 @@ if not cookies_loaded:
                 showImage, show_in_terminal=show_in_terminal, ensure_unicode=ensure_unicode)
             fucker.login(use_qr=True, qr_callback=callback)
         else:
+            import faker
             faker.login(username, password)
         print("Login Successful\n")
         if save_cookies:
@@ -362,3 +362,4 @@ if args.videos:
 # fucker.fuckVideo(course_id="", file_id="")
 
 # check the source code or README to find more info
+
